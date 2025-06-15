@@ -5,7 +5,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "regexSubstitution": "https://zonatmo.com/viewer/\\1/cascade"
+        "regexSubstitution": "https://zonatmo.com/viewer/${1}/cascade"
       }
     },
     "condition": {

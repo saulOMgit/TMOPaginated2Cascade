@@ -1,19 +1,19 @@
 const statusEl = document.getElementById("status");
-const buttonEl = document.getElementById("toggleBtn");
+const toggleBtn = document.getElementById("toggleBtn");
 
-chrome.storage.local.get("enabled", (data) => {
-  const enabled = data.enabled !== false; // default: true
+function updateUI(enabled) {
+  statusEl.textContent = `Redirección: ${enabled ? "Activada" : "Desactivada"}`;
+  toggleBtn.textContent = enabled ? "Desactivar" : "Activar";
+}
+
+chrome.storage.local.get("enabled", ({ enabled }) => {
+  if (enabled === undefined) enabled = true;
   updateUI(enabled);
 });
 
-function updateUI(enabled) {
-  statusEl.innerHTML = `Estado: <strong>${enabled ? "Activo" : "Inactivo"}</strong>`;
-  buttonEl.textContent = enabled ? "Desactivar" : "Activar";
-}
-
-buttonEl.addEventListener("click", () => {
-  chrome.storage.local.get("enabled", (data) => {
-    const newState = !(data.enabled !== false);
+toggleBtn.addEventListener("click", () => {
+  chrome.storage.local.get("enabled", ({ enabled }) => {
+    const newState = !(enabled !== false);
     chrome.storage.local.set({ enabled: newState }, () => {
       updateUI(newState);
     });
