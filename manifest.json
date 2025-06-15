@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "TMO Paginated 2 Cascade",
+  "version": "1.1",
+  "author": "saulOMgit",
+  "description": "Redirige de paginated a cascade en zonatmo.com.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://zonatmo.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "redirect_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "action": {
+    "default_title": "TMO Paginated 2 Cascade",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}

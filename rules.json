@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://zonatmo.com/viewer/\\1/cascade"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://zonatmo\\.com/viewer/([^/]+)/paginated$",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
