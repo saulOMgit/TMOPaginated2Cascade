@@ -17,7 +17,7 @@ Una extensión para navegadores basada en Chromium (Chrome, Brave, Edge, etc.) q
 
 ## 🧑‍💻 Instalación manual
 
-1. Descarga o clona este repositorio.
+1. Descarga o clona este repositorio. (o mas comodo a traves de [Releases](https://github.com/saulOMgit/TMOPaginated2Cascade/releases)
 2. Abre tu navegador Chrome o compatible.
 3. Ve a `chrome://extensions/`.
 4. Activa el modo de **Desarrollador** (arriba a la derecha).
